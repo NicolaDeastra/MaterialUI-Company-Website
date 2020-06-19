@@ -7,7 +7,7 @@ export default createMuiTheme({
   palette: {
     common: {
       blue: `${arcBlue}`,
-      arcOrange: `${arcOrange}`,
+      orange: `${arcOrange}`,
     },
     primary: {
       main: `${arcBlue}`,
