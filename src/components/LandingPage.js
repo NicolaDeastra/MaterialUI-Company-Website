@@ -9,6 +9,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import animationData from "../animations/landinganimation/data";
 import customSoftwareIcon from "../assets/Custom Software Icon.svg";
+import mobileAppsIcon from "../assets/mobileIcon.svg";
 
 const useStyles = makeStyles((theme) => ({
   animation: {
@@ -138,7 +139,7 @@ export default function LandingPage() {
       </Grid>
       <Grid item>
         {" "}
-        {/*-----Services Block-----*/}
+        {/*-----Custom software Block-----*/}
         <Grid
           container
           direction="row"
@@ -174,6 +175,47 @@ export default function LandingPage() {
               className={classes.icon}
               alt="custom software icon"
               src={customSoftwareIcon}
+            />
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid item>
+        {" "}
+        {/*-----Android/iOS Block-----*/}
+        <Grid
+          container
+          direction="row"
+          justify={matchesSM ? "center" : "flex-end"}
+          className={classes.serviceContainer}
+        >
+          <Grid
+            item
+            style={{
+              textAlign: matchesSM ? "center" : undefined,
+            }}
+          >
+            <Typography variant="h4">iOS/Android App Development</Typography>
+            <Typography variant="subtitle1" className={classes.subtitle}>
+              Extend functionality. Extend Access. Increase Engagement
+            </Typography>
+            <Typography variant="subtitle1">
+              Integrate your web experience or create a standalone app
+              {matchesSM ? null : <br />} with either mobile platform.
+            </Typography>
+            <Button variant="outlined" className={classes.learnButton}>
+              <span style={{ marginRight: 10 }}>Learn More </span>
+              <ButtonArrow
+                width={10}
+                height={10}
+                fill={theme.palette.common.blue}
+              />
+            </Button>
+          </Grid>
+          <Grid item style={{ marginRight: matchesSM ? 0 : "5em" }}>
+            <img
+              className={classes.icon}
+              alt="mobile phone icon"
+              src={mobileAppsIcon}
             />
           </Grid>
         </Grid>
